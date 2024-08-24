@@ -1,0 +1,63 @@
+{
+  "Error": {
+    "description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>",
+    "title": "Etwas ist schief gelaufen!"
+  },
+
+  "header": {
+    "login": "Anmeldung"
+    
+  },
+  "Hero": {
+    "präTitle": "Innenarchitektur",
+    "Title": "8zense.com",
+    "postTitle": "Zeitloses Desing mit dem Werkstoff Beton"
+  },  
+  
+  "IndexPage": {
+    "description": "Dies ist ein Beispiel, das die Verwendung von <code>next-intl</code> mit dem Next.js App Router demonstriert. Bei Ändern der Sprache rechts oben ändert sich der Inhalt dieser Seite.",
+    "title": "next-intl Beispiel"
+  },
+
+  "introWebside": {
+    "zitat": "die Schönheit eines Lebewesens wird nicht durch de Atome erzeugt welche es beinhaltet sondern von der Anordnung dieser zueinander ",
+    "text01": "Desing Interiore",
+    "text02":  "begleitet, beratet und unterstützt Sie professionell bei der Planung und Umsetzung Ihres individuellen Interieure Desings in Wohnung, Haus, Büro ofer Praxis. Sprechen Sie uns an - Wir freuen uns auf Sie!",
+    "text03": "Timeless Design",
+    "text04": "steht für zeitloses, exklusives und individuelles Design aus dem Werkstoff Beton. Jedes unserer individuell hergestellten Betonwerkstücke ist handgefertigt und ein Unikat "
+  },
+  "LocaleLayout": {
+    "title": "next-intl Beispiel"
+  },
+  "LocaleSwitcher": {
+    "label": "Sprache ändern",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unbekannt}}"
+  },
+  "Manifest": {
+    "description": "",
+    "name": ""
+  },
+ 
+  "NotFoundPage": {
+    "description": "Bitte überprüfe die Addressleiste deines Browsers oder verwende die Navigation um zu einer bekannten Seite zu wechseln.",
+    "title": "Seite nicht gefunden"
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "description": "Erfahre mehr über next-intl in der offiziellen Dokumentation.",
+        "href": "https://next-intl-docs.vercel.app/",
+        "title": "Dokumentation"
+      },
+      "source": {
+        "description": "Sieh dir den Quellcode dieses Beispiels auf GitHub an.",
+        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+        "title": "Quellcode"
+      }
+    }
+  },
+  "PathnamesPage": {
+    "description": "<p>Auch die Pfadnamen sind internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/en/pathnames</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL entsprechend lokalisiert (<code>/de/pfadnamen</code>).</p>",
+    "title": "Pfadnamen"
+  }
+}
