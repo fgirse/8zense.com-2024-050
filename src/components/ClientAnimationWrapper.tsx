@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable tailwindcss/no-custom-classname */
+
 
 'use client';
 

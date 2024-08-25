@@ -2,7 +2,7 @@
 
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
-import MessageUsEmail from '@/app/api/emails/EmailMessage'
+import MessageUsEmail from '@/src/app/api/emails/EmailMessage'
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

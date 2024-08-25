@@ -31,7 +31,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocaleLayout({
+export default async function LocalLayout({
   children,
   params: {locale}
 }: Props) {
