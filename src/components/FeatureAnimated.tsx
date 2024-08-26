@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { useTranslations } from 'next-intl';
 
 interface Step {
   id: number;
@@ -9,6 +10,7 @@ interface Step {
   animation: string;
 }
  const HowItWorks: React.FC = () => {
+  const t = useTranslations('HowItWorks');
   const [step, setStep] = useState<number>(0);
 
   const steps: Step[] = [
@@ -58,6 +60,8 @@ interface Step {
   }, [handleStepChange]);
 
   return (
+    <>
+    <h1 className='text-center bg-black uppercase text-3xl text-white'>{t('Howitworks')}</h1>
     <motion.div
       className=" flex flex-col sm:min-h-screen h-full"
       key={steps[step].id} // Add a unique key to trigger motion animation on step change
@@ -88,6 +92,7 @@ interface Step {
         </p>
       </div>
     </motion.div>
+    </>
   );
 };
 

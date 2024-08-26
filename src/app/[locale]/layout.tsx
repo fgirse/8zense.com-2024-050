@@ -10,6 +10,9 @@ import {ReactNode} from 'react';
 import Navigation from '@/src/components/Navigation/navigation';
 import {locales} from '@/src/config';
 import '@/src/app/globales.css'
+import Footer from '@/src/components/Footer/footer';
+import ScrollToTop from '@/src/components/ScrollToTop';
+
 const inter = Inter({subsets: ['latin']});
 
 type Props = {
@@ -48,6 +51,8 @@ export default async function LocalLayout({
         <NextIntlClientProvider messages={messages}>
           <Navigation />
           {children}
+          <ScrollToTop/>
+          <Footer/>
         </NextIntlClientProvider>
       </body>
     </html>

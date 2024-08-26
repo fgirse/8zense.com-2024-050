@@ -12,7 +12,8 @@ import Lotticall from "@/src/components/LottiCallToAct";
 import { CallToAct } from "@/src/components/CallToAct";
 import ColorChangeCards from "@/src/components/ColorChangeCard";
 import IlluTestimonial from "@/public/assets/images/illustration.png";
-import HorizontalSroll from"@/src/components/HorizontalScrollCarousel";
+import HorizontalSroll from "@/src/components/HorizontalScrollCarousel";
+import { useTranslations } from "next-intl";
 export default async function Index() {
   const canInitSupabaseClient = () => {
     // This function is just for the interactive tutorial.
@@ -29,109 +30,62 @@ export default async function Index() {
 
   return (
     <div className="flex-1 w-full flex flex-col gap-2 items-center">
-    <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
+      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
         <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-        
           {isSupabaseConnected && <AuthButton />}
         </div>
       </nav>
 
-      <div className="flex-1 flex flex-col gap-0 max-w-4xl px-3">
-</div>        
-        <main className="flex-1 flex flex-col">
-         {/*<section className="relative min-h screen"><Hero/></section>*/}
-         
+      <div className="flex-1 flex flex-col gap-0 max-w-4xl px-3"></div>
+      <main className="flex-1 flex flex-col">
+        {/*<section className="relative min-h screen"><Hero/></section>*/}
 
-{/*====================================================grid start ===============*/}
+        {/*====================================================grid start ===============*/}
 
+        <section className="w-[100vw] mx-auto bg-neutral-100">
+          <div className="relative">
+            <Hero />
+          </div>
 
-<section className='w-[100vw] mx-auto bg-neutral-100'>
+          <section className="">
+            <IntroWebside />
+          </section>
+          <section className="">
+            <CollapseCardFeatures />
+          </section>
 
-  <div className='relative'>
+          <section id="section-itworks" className="lg:h-[66vh]">
+            <FeatureAnim />
+          </section>
 
-    <Hero />
+          <section id="section-projRef" className="lg:h-[66vh]">
+            <div className="bg-black mt-24">
+              <h1 className="text-center text-white uppercase text-3xl md:text-6xl lg:mb-24  ">
+                Referenz Projekte
+              </h1>
+            </div>
 
-  </div>
+            <ColorChangeCards />
+          </section>
+          <section className="">
+            <CallToAct />
+          </section>
 
+          <section id="section-testimonials" className="-mt-24 lg:h-[70vh]">
+            <div className="bg-black mb-7 mt-24">
+              <h1 className="text-center text-zenseWhite uppercase text-3xl md:text-6xllg:mb-24  ">
+                Testimonials
+              </h1>
+            </div>
+          </section>
 
-  <section className=''>
+          {/*====================================================grid ende ===============*/}
 
-    <IntroWebside />
-
-  </section>
-  <section className=''>
-
-    <CollapseCardFeatures />
-
-  </section>
-
-  <section id="section-itworks" className="lg:h-[66vh]">
-
-<div className="bg-black mt-24">
-
-  <h1 className="text-center text-zenseWhite uppercase text-3xl md:text-6xllg:mb-24  ">
-
-    How it works
-
-  </h1>
-
-0</div>
-
-<FeatureAnim />
-
-</section>
-
-
-<section id="section-projRef" className="lg:h-[66vh]">
-
-<div className="bg-black mt-24">
-
-  <h1 className="text-center text-zenseWhite uppercase text-3xl md:text-6xl lg:mb-24  ">
-
-    Referenz Projekte
-
-  </h1>
-
-</div>
-
-{/*<ColorChangeCards />*/}
-
-</section>
-<section className=''>
-
-
-<CallToAct />
-
-</section>
-
-
-<section id="section-testimonials" className="-mt-24 lg:h-[70vh]">
-
-<div className="bg-black mb-7 mt-24">
-
-  <h1 className="text-center text-zenseWhite uppercase text-3xl md:text-6xllg:mb-24  ">
-
-    Testimonials
-
-  </h1>
-
-</div>
-
-
-
-</section>
-
-{/*====================================================grid ende ===============*/}
-
-
-
-<section className="">
-
-{/*<HorizontalSroll />*/}
-
-</section>
-
-
-
-</section></main></div>
-  )}
+          <section className="">
+            <HorizontalSroll />
+          </section>
+        </section>
+      </main>
+    </div>
+  );
+}
