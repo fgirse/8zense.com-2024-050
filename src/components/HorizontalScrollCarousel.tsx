@@ -58,7 +58,7 @@ const Card = ({ card }: { card: CardType }) => {
         className="absolute tpooi inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute top-[30vh] inset-0 z-10 grid place-content-center">
-        <p className=" leading-6 bg-gradient-to-br from-zenseSignal2/25 to-white/0 p-8 text-4xl font-black uppercase text-white ">
+        <p className=" leading-6 bg-gradient-to-br from-orange-500/50 to-white/0 p-8 text-4xl font-black uppercase text-white ">
           {card.title}
         <br/>
         <span className="text-2xl">
