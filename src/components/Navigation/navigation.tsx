@@ -14,13 +14,11 @@ import LogoEZ from"@/public/assets/images/LogoEZ990.svg";
 import Switcher from '@/src/components/LocaleSwitcher'
 export default function Component() {
   return (
-    <header className="flex h-20 w-full bg-gradient to b from bg-slate-500 to transparence shrink-0 jusrify-between items-center px-4 md:px-6">
-
+    <header className="flex h-20 w-full bg-gradient to b from bg-slate-50 to transparence shrink-0 items-center px-4 md:px-6">
       <Link href="#" className="mr-6 hidden 2xl:flex" prefetch={false}>
         <Image src={LogoEZ} alt="Logo" className="h-16 w-16" />
         <span className="sr-only">8zense.com</span>
       </Link>
-      
       <NavigationMenu className="hidden 2xl:flex">
         <NavigationMenuList>
           <NavigationMenuLink asChild>
@@ -96,14 +94,12 @@ export default function Component() {
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-
-        <div className="flex flex-row justify-between items-center">
         <SheetContent className="bg-red-900" side="left">
-        <Link href="/" className="mr-6 hidden 2xl:flex" prefetch={false}>
+        <Link href="#" className="mr-6 hidden 2xl:flex" prefetch={false}>
         <Image src={LogoEZ} alt="Logo" className="h-16 w-16" />
         <span className="sr-only">8zense.com</span>
       </Link>
-          <div className="bg-red-800 px-3 text-slate-300 grid gap-2 py-6">
+          <div className="bg-red-900 px-3 text-slate-300 grid gap-2 py-6">
             <Link href="/" className="flex w-full items-center py-2 text-2xl font-semibold hover:font-black hover:border-b-2 hover:border-spacing-12" prefetch={false}>
               Home
             </Link>
@@ -113,16 +109,16 @@ export default function Component() {
               </collapsible.CollapsibleTrigger>
               <collapsible.CollapsibleContent>
                 <div className="-mx-6 grid gap-6 bg-muted p-6">
-                  <Link href="#" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
+                  <Link href="/about" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
                     <div className="text-sm font-medium leading-none group-hover:underline">Wer wir sind</div>
                 
                 
                   </Link>
-                  <Link href="#" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
+                  <Link href="/about" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
                     <div className="text-sm font-medium leading-none group-hover:underline">Was wir tun</div>
                     
                   </Link>
-                  <Link href="#" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
+                  <Link href="/en/about" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
                   <div className="text-sm font-medium leading-none group-hover:underline">Was wir tun</div>
                   </Link>
                 </div>
@@ -136,11 +132,8 @@ export default function Component() {
             </Link>
           </div>
         </SheetContent>
-        <Switcher/>
-        </div>
       </Sheet>
-     
-    
+      <Switcher/> 
     </header>
   )
 }
