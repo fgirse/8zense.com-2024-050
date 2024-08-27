@@ -4,7 +4,7 @@
     "title": "Etwas ist schief gelaufen!"
   },
 
-  "header": {
+  "authButton": {
     "login": "Anmeldung"
     
   },
@@ -15,7 +15,13 @@
   },  
   
   "HowItWorks": {
-    "Howitworks": "So geht's"
+    "Howitworks": "So geht's",
+    "text_01": "Erstellen Sie einen Account auf unserer Website  von 8zense.com!",
+    "text_02": "Vereinbaren Sie ein Zielgespräch mit Fernanda zur Definition Ihrer Wünsche, Vorstellungen und Ideen!",
+    "text_03": "Dank unsers ausgezeichnetes Networking finden wir für Sie genau das Team dass unter der Leitung von Fernanda ihren Designtraum erfüllt.",
+    "text_04": "Das Projekt wird in viele Einzelprojekte herunter gebrochen - nach und nach fügt sich Ihr Design-Traum wie ein Puzzel zu etwas aussergewöhlichen wundervollem zusammnen",
+    "text_05": "In allen Phasen des Projektes wird in einem Analyze-Evaluate-Synthesyze-Circuit kontenuierlich fortentwickelt, bis Ihre Ziele und Vorgaben erreicht sind!",
+    "text_06": "Ist Ihr Design-Projekt dann umgesetzt, erfolgt der Startpfiff zur Abnahme des Projektes durch Fernanda mit allen Beteiligten gemeinsam bis alle Korrekturen und Beanstandungen aus dem Weg geräumt sind"
   
   },
 
@@ -36,6 +42,18 @@
   "Manifest": {
     "description": "",
     "name": ""
+  },
+
+  "Navigation": {
+    "home": "Start",
+    "about": "über uns",
+    "ourhistory": "Unsere Geschichte",
+    "whatwedo": "Was wir tun?",
+    "whoweare": "Wer wir sind?",
+    "contact": "Kontakt",
+    "impressum": "Impressum"
+
+  
   },
  
   "NotFoundPage": {

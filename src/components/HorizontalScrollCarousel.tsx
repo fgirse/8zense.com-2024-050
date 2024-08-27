@@ -5,15 +5,15 @@ import { useRef } from "react";
 
 const Example = () => {
   return (
-    <div className="bg-neutral-100">
-      <div className="flex h-48 items-center justify-center">
+    <div className="mt-24 bg-neutral-100">
+      <div className="flex h-60 items-center justify-center">
         <span className="font-semibold uppercase text-orange-500">
           Scroll down
         </span>
       </div>
-      <h1 className="text-center text-zenseWhite uppercase text-4xl md:6xl lg:text-[5.33rem]">Das Team</h1>
+      <h1 className="text-center text-white uppercase text-4xl md:6xl lg:text-[5.33rem]">Das Team</h1>
       <HorizontalScrollCarousel />
-      <div className="flex h-48 items-center justify-center">
+      <div className="flex h-screen items-center justify-center">
         <span className="font-semibold uppercase text-orange-500">
           Scroll up
         </span>
@@ -32,7 +32,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-400">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div className="sticky top-0 flexää items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
@@ -58,7 +58,7 @@ const Card = ({ card }: { card: CardType }) => {
         className="absolute tpooi inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute top-[30vh] inset-0 z-10 grid place-content-center">
-        <p className=" leading-6 bg-gradient-to-br from-orange-500/50 to-white/0 p-8 text-4xl font-black uppercase text-white ">
+        <p className=" leading-6 bg-gradient-to-br from-orange-500/50 to-white/0 p-8 text-3xl font-black uppercase text-white ">
           {card.title}
         <br/>
         <span className="text-2xl">

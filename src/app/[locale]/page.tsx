@@ -29,7 +29,7 @@ export default async function Index() {
   const isSupabaseConnected = canInitSupabaseClient();
 
   return (
-    <div className="flex-1 w-full flex flex-col gap-2 items-center">
+    <div className="flex-1 bg-red-600 w-full flex flex-col gap-2 items-center">
       <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
         <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
           {isSupabaseConnected && <AuthButton />}
@@ -42,7 +42,7 @@ export default async function Index() {
 
         {/*====================================================grid start ===============*/}
 
-        <section className="w-[100vw] mx-auto bg-neutral-100">
+        <section className="w-[100vw] mx-auto bg-slate-300">
           <div className="relative">
             <Hero />
           </div>
@@ -54,12 +54,12 @@ export default async function Index() {
             <CollapseCardFeatures />
           </section>
 
-          <section id="section-itworks" className="lg:h-[66vh]">
+          <section id="section-itworks" className="lg:h-[45vh]">
             <FeatureAnim />
           </section>
 
-          <section id="section-projRef" className="lg:h-[66vh]">
-            <div className="bg-black mt-24">
+          <section id="section-projRef" className="-mt-4 lg:h-[66vh]">
+            <div className="bg-black">
               <h1 className="text-center text-white uppercase text-3xl md:text-6xl lg:mb-24  ">
                 Referenz Projekte
               </h1>
@@ -67,13 +67,13 @@ export default async function Index() {
 
             <ColorChangeCards />
           </section>
-          <section className="">
+          <section className="h-screen">
             <CallToAct />
           </section>
 
           <section id="section-testimonials" className="-mt-24 lg:h-[70vh]">
             <div className="bg-black mb-7 mt-24">
-              <h1 className="text-center text-zenseWhite uppercase text-3xl md:text-6xllg:mb-24  ">
+              <h1 className="text-center text-white uppercase text-3xl md:text-6xllg:mb-24  ">
                 Testimonials
               </h1>
             </div>

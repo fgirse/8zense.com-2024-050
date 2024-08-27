@@ -12,9 +12,12 @@ import { JSX, SVGProps } from "react"
 import Image from "next/image"
 import LogoEZ from"@/public/assets/images/LogoEZ990.svg";
 import Switcher from '@/src/components/LocaleSwitcher'
+import { useTranslations } from "next-intl"
 export default function Component() {
+const t = useTranslations('Navigation')
+
   return (
-    <header className="flex h-20 w-full bg-gradient to b from bg-slate-50 to transparence shrink-0 items-center px-4 md:px-6">
+    <header className="flex h-20 w-full bg-gradient to b from bg-white to transparence.0 shrink-0 items-center px-4 md:px-6">
       <Link href="#" className="mr-6 hidden 2xl:flex" prefetch={false}>
         <Image src={LogoEZ} alt="Logo" className="h-16 w-16" />
         <span className="sr-only">8zense.com</span>
@@ -23,15 +26,15 @@ export default function Component() {
         <NavigationMenuList>
           <NavigationMenuLink asChild>
             <Link
-              href="#"
+              href="/"
               className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
               prefetch={false}
             >
-              Home
+              
             </Link>
           </NavigationMenuLink>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>About</NavigationMenuTrigger>
+            <NavigationMenuTrigger>{t('home')}</NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="grid w-[400px] p-2">
                 <NavigationMenuLink asChild>
@@ -69,20 +72,20 @@ export default function Component() {
           </NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
-              href="#"
+              href="/contact"
               className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
               prefetch={false}
             >
-    Kontakt
+            {t('contact')}
             </Link>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link
-              href="#"
+              href="/impressum"
               className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
               prefetch={false}
             >
-              Impressum
+               {t('impressum')}
             </Link>
           </NavigationMenuLink>
         </NavigationMenuList>
@@ -95,40 +98,40 @@ export default function Component() {
           </Button>
         </SheetTrigger>
         <SheetContent className="bg-red-900" side="left">
-        <Link href="#" className="mr-6 hidden 2xl:flex" prefetch={false}>
+        <Link href="7" className="mr-6 hidden 2xl:flex" prefetch={false}>
         <Image src={LogoEZ} alt="Logo" className="h-16 w-16" />
         <span className="sr-only">8zense.com</span>
       </Link>
           <div className="bg-red-900 px-3 text-slate-300 grid gap-2 py-6">
             <Link href="/" className="flex w-full items-center py-2 text-2xl font-semibold hover:font-black hover:border-b-2 hover:border-spacing-12" prefetch={false}>
-              Home
+            {t("home")}
             </Link>
             <collapsible.Collapsible className="grid gap-4">
               <collapsible.CollapsibleTrigger className="flex w-full items-center text-2xl font-semibold [&[data-state=open]>svg]:rotate-90">
-                About <ChevronRightIcon className="ml-auto h-5 w-5 transition-all" />
+                {t("about")} <ChevronRightIcon className="ml-auto h-5 w-5 transition-all" />
               </collapsible.CollapsibleTrigger>
               <collapsible.CollapsibleContent>
                 <div className="-mx-6 grid gap-6 bg-muted p-6">
-                  <Link href="/about" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
-                    <div className="text-sm font-medium leading-none group-hover:underline">Wer wir sind</div>
+                  <Link href="/about/whoweare" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
+                    <div className="text-sm font-medium leading-none group-hover:underline">   {t('whoweare')}</div>
                 
                 
                   </Link>
-                  <Link href="/about" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
-                    <div className="text-sm font-medium leading-none group-hover:underline">Was wir tun</div>
+                  <Link href="/about/whatwedo" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
+                    <div className="text-sm font-medium leading-none group-hover:underline">   {t('whatwedo')}</div>
                     
                   </Link>
-                  <Link href="/en/about" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
-                  <div className="text-sm font-medium leading-none group-hover:underline">Was wir tun</div>
+                  <Link href="/about/ourhistory" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
+                  <div className="text-sm font-medium leading-none group-hover:underline">   {t('ourhistory')}</div>
                   </Link>
                 </div>
               </collapsible.CollapsibleContent>
             </collapsible.Collapsible>
             <Link href="/contact" className="flex w-full items-center py-2 text-2xl font-semibold hover:font-black hover:border-b-2 hover:border-spacing-12" prefetch={false}>
-              Contact
+            {t('contact')}
             </Link>
             <Link href="/impressum" className="flex w-full items-center py-2 text-2xl font-semibold hover:font-black" prefetch={false}>
-              Impressum
+            {t('impressum')}
             </Link>
           </div>
         </SheetContent>

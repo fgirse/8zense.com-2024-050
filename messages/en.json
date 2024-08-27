@@ -1,9 +1,10 @@
 {
+
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
     "title": "Something went wrong!"
   },
-  "header": {
+  "authButton": {
     "login": "Login"   
   },
   "Hero": {
@@ -22,8 +23,14 @@
     "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes.",
     "title": "next-intl example"
   },
-  "HowItWorks": {
-    "Howitworks": "How it works"
+ "HowItWorks": {
+    "Howitworks": "How it works",
+    "text_01": "Sign up an account on oue webside von 8zense.com!",
+    "text_02": "Make an appointment to an interview with Fernanda to define wishes, dreams and aims and ideas!",
+    "text_03": "Due to our excellent networking we will found a specific team of specialists which would realize your design dream under the hood of Fernanda will realize your design dream",
+    "text_04": "Das Projekt wird in viele Einzelprojekte herunter gebrochen - nach und nach fügt sich Ihr Design-Traum wie ein Puzzel zu etwas aussergewöhlichen wundervollem zusammnen",
+    "text_05": "In allen Phasen des Projektes wird in einem Analyze-Evaluate-Synthesyze-Circuit kontenuierlich fortentwickelt, bis Ihre Ziele und Vorgaben erreicht sind!",
+    "text_06": "Ist Ihr Design-Projekt dann umgesetzt, erfolgt der Startpfiff zur Abnahme des Projektes durch Fernanda mit allen Beteiligten gemeinsam bis alle Korrekturen und Beanstandungen aus dem Weg geräumt sind"
   
   },
 
@@ -37,13 +44,15 @@
   "Manifest": {
     "name": "next-intl example"
   },
-  "Navigation": {
+ "Navigation": {
     "home": "Home",
     "about": "About",
-    "company": "8zense.com",
-    "owner": "Fernanda Perreira",
+    "ourhistory": "our History",
+    "whatwedo": "What we do?",
+    "whoweare": "Who we are?",
     "contact": "Contact",
     "impressum": "Impressum"
+
   
   },
   "NotFoundPage": {

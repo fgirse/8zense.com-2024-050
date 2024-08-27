@@ -6,7 +6,7 @@ import LottiCallToAct from "./LottiCallToAct";
 const CallToAct = () => {
   return (
     <div className="flex flex-col items-center justify-center ">
-      <div className="w-full h-screen">
+      <div className="w-full h-[50vh]">
         <LottiCallToAct />
         <EmailModal />
       </div>

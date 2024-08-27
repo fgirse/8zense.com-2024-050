@@ -16,33 +16,33 @@ interface Step {
   const steps: Step[] = [
     {
       id: 1,
-      text: "Erstellen Sie einen Account auf unserer Website  von 8zense.com!",
+      text: t("text_01"),
       animation: "https://lottie.host/e90fc516-078a-4e65-ac43-ab5a7b1bc4ed/W6DDrvJFL3.json",
     },
     {
       id: 2,
-      text: "Vereinbaren Sie ein Zielgespräch mit Fernanda zur Definition Ihrer Wünsche, Vorstellungen und Ideen!",
+      text: t("text_02"),
       animation: "https://lottie.host/57443a3d-e280-4f39-9134-86d96cd8f28f/ohtp2XVGjS.json",
     },
     {
       id: 3,
-      text: "Dank unsers ausgezeichnetes Networking finden wir für Sie genau das Team dass unter der Leitung von Fernanda ihren Designtraum erfüllt.",
+      text: t("text_03"),
       animation: "https://lottie.host/78373cd4-e991-482b-8f25-e897acb9bbb8/V0IaYYRt3A.json",
     },
     {
       id: 4,
-      text: "Das Projekt wird in viele Einzelprojekte herunter gebrochen - nach und nach fügt sich Ihr Design-Traum wie ein Puzzel zu etwas aussergewöhlichen wundervollem zusammnen",
+      text: t("text_04"),
       animation: "https://assets3.lottiefiles.com/private_files/lf30_p9it5a2a.json",
     },
     {
       id: 5,
-      text: "In allen Phasen des Projektes wird in einem Analyze-Evaluate-Synthesyze-Circuit kontenuierlich fortentwickelt, bis Ihre Ziele und Vorgaben erreicht sind!",
+      text: t("text_05"),
       animation: "https://lottie.host/d969d744-bf03-4aa4-90ac-50f9c5dda9b5/P36NGczhaX.json",
     },
 
     {
       id: 6,
-      text: "Ist Ihr Design-Projekt dann umgesetzt, erfolgt der Startpfiff zur Abnahme des Projektes durch Fernanda mit allen Beteiligten gemeinsam bis alle Korrekturen und Beanstandungen aus dem Weg geräumt sind.",
+      text: t("text_06"),
       animation: "https://lottie.host/59703381-ed25-463c-913f-7cd163db2aa7/uF1vDxwgIZ.json",
     },
     
@@ -75,10 +75,10 @@ interface Step {
       <div className='h-[100%] p-5 flex flex-col items-center justify-center'>
         <div className=" grid-cols-2 gap-8">
           <p className="mb-1§2 text-sm md:text-base text-slate-800 font-light leading-relaxed text-center">
-            HOW IT WORKS
+        
           </p>                        
-          <h2 className="text-3xl md:text-4xl text-[#1A2238] font-semibold mb-4 text-center">
-            {`so funktioniert 8zense.com`}
+          <h2 className="text-1xl md:text-4xl text-[#1A2238] font-semibold mb-4 text-center">
+            {`so funktioniert 8zense.com!!!`}
           </h2>
           <Player
             autoplay
