@@ -1,9 +1,9 @@
 import React from 'react'
 
-const  c = () => {
+const page = () => {
   return (
-    <div> c</div>
+    <div className='text-5xl  text-xenter text-green-600 uppercase'>our history</div>
   )
 }
 
-export default  c
+export default page

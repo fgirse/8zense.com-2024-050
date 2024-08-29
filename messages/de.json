@@ -35,9 +35,9 @@
   "LocaleLayout": {
     "title": "next-intl Beispiel"
   },
-  "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unbekannt}}"
+ "LocaleSwitcher": {
+    "label": "wähle Sprache",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} fr {🇫🇷 France} other {Unknown}}"
   },
   "Manifest": {
     "description": "",

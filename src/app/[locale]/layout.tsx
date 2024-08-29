@@ -33,13 +33,6 @@ const defaultUrl = process.env.VERCEL_URL
     variable: "--font-architects-daughter"
   });
 
-
-  
-
-
-
-
-
 const inter = Inter({subsets: ['latin']});
 
 type Props = {
@@ -61,23 +54,21 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocalLayout({
+export default async function RootLayout({
   children,
-  params: {locale}
-}: Props) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  params: { locale },
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
   const messages = await getMessages();
-
   return (
-    <html className="h-full" lang={locale}>
-      <body className={clsx(inter.className, 'flex h-full flex-col')}>
+    <html lang="de" className='h-full' suppressHydrationWarning>
+      <body className={clsx(roboto.className, 'flex h-full flex-col')}>
         <NextIntlClientProvider messages={messages}>
           <Navigation />
-          {children}
+
+          <div className="max-w-7xl mx-auto">{children}</div>
           <ScrollToTop/>
           <Footer/>
         </NextIntlClientProvider>
@@ -85,3 +76,5 @@ export default async function LocalLayout({
     </html>
   );
 }
+
+

@@ -17,53 +17,53 @@ export default function Component() {
 const t = useTranslations('Navigation')
 
   return (
-    <header className="flex h-20 w-full bg-gradient to b from bg-white to transparence.0 shrink-0 items-center px-4 md:px-6">
-      <Link href="#" className="mr-6 hidden 2xl:flex" prefetch={false}>
-        <Image src={LogoEZ} alt="Logo" className="h-16 w-16" />
+    <header className="flex h-20 w-full bg-gradient to b 0223from bg-white to transparence.0 shrink-0 items-center px-4 md:px-6">
+      <Link href="#" className="mr-6 flex" prefetch={false}>  
+        <Image src={LogoEZ} alt="Logo" className="lg:h-20 lg:w-20" />
         <span className="sr-only">8zense.com</span>
       </Link>
-      <NavigationMenu className="hidden 2xl:flex">
+      <NavigationMenu className="hidden xl:flex">
         <NavigationMenuList>
-          <NavigationMenuLink asChild>
+        <NavigationMenuLink asChild>
             <Link
               href="/"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md uppercase bg-neutral-200 hover:bg-neutral-300 px-4 py-2 text-sm  lg:text-[1.33rem] font-black transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
               prefetch={false}
             >
-              
+               {t('home')}
             </Link>
           </NavigationMenuLink>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>{t('home')}</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="bg-neutral-200 hover:bg-neutral-300 uppercase lg:text-[1.33rem] font-black">{t('about')}</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="grid w-[400px] p-2">
+              <div className="bg-yellow-700 grid w-[400px] p-2">
                 <NavigationMenuLink asChild>
                   <Link
-                    href="#"
-                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    href="/about/whoweare"
+                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm lg:text-[1.33rem] font-black transition-colors  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                     prefetch={false}
                   >
-                    <div className="text-sm font-medium leading-none group-hover:underline">wer wir sind</div>
+                    <div className="text-sm font-medium leading-none group-hover:underline">  {t('whoweare')}</div>
                     
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="#"
-                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    href="/about/whatwedo"
+                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm lg:text-[1.33rem] font-black transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                     prefetch={false}
                   >
-                    <div className="text-sm font-medium leading-none group-hover:underline">was wir tun</div>
+                    <div className="text-sm lg:text-[1.33rem] font-black leading-none group-hover:underline">  {t('whatwedo')}</div>
                     
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="#"
-                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    href="/about/ourhistory"
+                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm lg:text-[1.33rem] font-black transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                     prefetch={false}
                   >
-                    <div className="text-sm font-medium leading-none group-hover:underline">unsere Geschichte</div>
+                    <div className="text-sm lg:text-[1.33rem] font-black leading-none group-hover:underline">  {t('ourhistory')}</div>
                     
                   </Link>
                 </NavigationMenuLink>
@@ -73,7 +73,7 @@ const t = useTranslations('Navigation')
           <NavigationMenuLink asChild>
             <Link
               href="/contact"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 uppercase text-sm lg:text-[1.33rem] font-black bg-neutral-200 hover:bg-neutral-300 transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
               prefetch={false}
             >
             {t('contact')}
@@ -82,7 +82,7 @@ const t = useTranslations('Navigation')
           <NavigationMenuLink asChild>
             <Link
               href="/impressum"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 uppercase  text-sm lg:text-[1.33rem] font-black bg-neutral-200 hover:bg-neutral-300 transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
               prefetch={false}
             >
                {t('impressum')}
@@ -104,7 +104,7 @@ const t = useTranslations('Navigation')
       </Link>
           <div className="bg-red-900 px-3 text-slate-300 grid gap-2 py-6">
             <Link href="/" className="flex w-full items-center py-2 text-2xl font-semibold hover:font-black hover:border-b-2 hover:border-spacing-12" prefetch={false}>
-            {t("home")}
+              Home
             </Link>
             <collapsible.Collapsible className="grid gap-4">
               <collapsible.CollapsibleTrigger className="flex w-full items-center text-2xl font-semibold [&[data-state=open]>svg]:rotate-90">

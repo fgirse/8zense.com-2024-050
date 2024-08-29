@@ -1,0 +1,82 @@
+{
+    "Error": {
+      "description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>",
+      "title": "Etwas ist schief gelaufen!"
+    },
+  
+    "authButton": {
+      "login": "Connectez"
+      
+    },
+    "Hero": {
+      "präTitle": "Desinge interieure",
+      "Title": "8zense.com",
+      "postTitle": "Desing sans temps avec le materiale Beton"
+    },  
+    
+    "HowItWorks": {
+      "Howitworks": "So geht's",
+      "text_01": "Erstellen Sie einen Account auf unserer Website  von 8zense.com!",
+      "text_02": "Vereinbaren Sie ein Zielgespräch mit Fernanda zur Definition Ihrer Wünsche, Vorstellungen und Ideen!",
+      "text_03": "Dank unsers ausgezeichnetes Networking finden wir für Sie genau das Team dass unter der Leitung von Fernanda ihren Designtraum erfüllt.",
+      "text_04": "Das Projekt wird in viele Einzelprojekte herunter gebrochen - nach und nach fügt sich Ihr Design-Traum wie ein Puzzel zu etwas aussergewöhlichen wundervollem zusammnen",
+      "text_05": "In allen Phasen des Projektes wird in einem Analyze-Evaluate-Synthesyze-Circuit kontenuierlich fortentwickelt, bis Ihre Ziele und Vorgaben erreicht sind!",
+      "text_06": "Ist Ihr Design-Projekt dann umgesetzt, erfolgt der Startpfiff zur Abnahme des Projektes durch Fernanda mit allen Beteiligten gemeinsam bis alle Korrekturen und Beanstandungen aus dem Weg geräumt sind"
+    
+    },
+  
+    "introWebside": {
+      "zitat": "die Schönheit eines Lebewesens wird nicht durch de Atome erzeugt welche es beinhaltet sondern von der Anordnung dieser zueinander ",
+      "text01": "Desing Interiore",
+      "text02":  "begleitet, beratet und unterstützt Sie professionell bei der Planung und Umsetzung Ihres individuellen Interieure Desings in Wohnung, Haus, Büro ofer Praxis. Sprechen Sie uns an - Wir freuen uns auf Sie!",
+      "text03": "Timeless Design",
+      "text04": "steht für zeitloses, exklusives und individuelles Design aus dem Werkstoff Beton. Jedes unserer individuell hergestellten Betonwerkstücke ist handgefertigt und ein Unikat "
+    },
+    "LocaleLayout": {
+      "title": "next-intl Examplel"
+    },
+    "LocaleSwitcher": {
+    "label": "Changer la lanque",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} fr {🇫🇷 France} other {Unknown}}"
+  },
+    "Manifest": {
+      "description": "",
+      "name": ""
+    },
+  
+    "Navigation": {
+      "home": "Maison",
+      "about": "apropos de nous",
+      "ourhistory": "Notre histoire",
+      "whatwedo": "Questque fait?",
+      "whoweare": "Questque nous sommes?",
+      "contact": "Contacte",
+      "impressum": "info-Impressum"
+  
+    
+    },
+   
+    "NotFoundPage": {
+      "description": "Bitte überprüfe die Addressleiste deines Browsers oder verwende die Navigation um zu einer bekannten Seite zu wechseln.",
+      "title": "Seite nicht gefunden"
+    },
+    "PageLayout": {
+      "links": {
+        "docs": {
+          "description": "Erfahre mehr über next-intl in der offiziellen Dokumentation.",
+          "href": "https://next-intl-docs.vercel.app/",
+          "title": "Dokumentation"
+        },
+        "source": {
+          "description": "Sieh dir den Quellcode dieses Beispiels auf GitHub an.",
+          "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+          "title": "Quellcode"
+        }
+      }
+    },
+    "PathnamesPage": {
+      "description": "<p>Auch die Pfadnamen sind internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/en/pathnames</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL entsprechend lokalisiert (<code>/de/pfadnamen</code>).</p>",
+      "title": "Pfadnamen"
+    }
+  }
+  

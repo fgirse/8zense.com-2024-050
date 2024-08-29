@@ -22,7 +22,7 @@ export default async function AuthButton() {
    const t = await getTranslations("authButton");
 
   return user ? (
-    <div className="flex  bg-re  items-center gap-2">
+    <div className="flex  bg-re agru  items-center gap-2">
       Hey, {user.email}!
       <form action={signOut}>
         <button className="py-2 px-4 rounded-xl no-underline bg-btn-background hover:bg-btn-background-hover">
@@ -32,7 +32,7 @@ export default async function AuthButton() {
     </div>
   ) : (
     <Link
-      href="/(locale)/login"
+      href="/login"
       className="cursor-pointer py-2 px-3 flex h-12 rounded-xl text-3xl no-underline bg-amber-500 hover:bg-amber-600"
     >
     {t('login')}
