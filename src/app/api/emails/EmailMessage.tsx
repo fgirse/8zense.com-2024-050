@@ -25,7 +25,7 @@ const MessageUsEmail = ({ name, email, message }: MessageUsEmailProps) => {
   
   const previewText = `Weekly Updates 🚀${name} sent you a message.`;
   
-  const t = useTranslations("")
+  const t = useTranslations("emailMessage")
   
   return (
     <Html>

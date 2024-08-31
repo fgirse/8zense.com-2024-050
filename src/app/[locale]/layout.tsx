@@ -1,20 +1,27 @@
-import clsx from 'clsx';
-import {Inter} from 'next/font/google';
-import {NextIntlClientProvider} from 'next-intl';
+
+import "@/src/app/[locale]/globals.css";
+import { locales } from "@/src/i18n.config";
 import {
   getMessages,
   getTranslations,
-  unstable_setRequestLocale
-} from 'next-intl/server';
+  unstable_setRequestLocale,
+} from "next-intl/server";
+import useTextDirection from "@/src/_hooks/useTextDirection";
+
+import clsx from 'clsx';
+import {Inter} from 'next/font/google';
+import {NextIntlClientProvider} from 'next-intl';
+
 import {ReactNode} from 'react';
 import Navigation from '@/src/components/Navigation/navigation';
-import {locales} from '@/src/config';
+
 import '@/src/app/globales.css'
 import Footer from '@/src/components/Footer/footer';
 import { Metadata } from 'next';
 import { Roboto_Condensed, Architects_Daughter } from "next/font/google"
 
 import ScrollToTop from "@/src/components/ScrollToTop";
+
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
@@ -40,32 +47,42 @@ type Props = {
   params: {locale: string};
 };
 
+
+
 export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
+  return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
-  params: {locale}
-}: Omit<Props, 'children'>) {
-  const t = await getTranslations({locale, namespace: 'LocaleLayout'});
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({
+    locale,
+    namespace: "Layout.metaData",
+  });
 
   return {
-    title: t('title')
+    title: t("title"),
+    description: t("description"),
   };
 }
 
-export default async function RootLayout({
+export default function LocaleLayout({
   children,
   params: { locale },
-}: {
+}: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
-}) {
-  const messages = await getMessages();
+}>) {
+  unstable_setRequestLocale(locale);
+  const dir = useTextDirection();
+  const messages = getMessages();
   return (
-    <html lang="de" className='h-full' suppressHydrationWarning>
+    <html lang={locale}  className='h-full' suppressHydrationWarning dir={dir}>
       <body className={clsx(roboto.className, 'flex h-full flex-col')}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider>
           <Navigation />
 
           <div className="max-w-7xl mx-auto">{children}</div>

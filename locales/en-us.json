@@ -7,6 +7,11 @@
   "authButton": {
     "login": "Login"   
   },
+  "emailMessage": {
+    "Email_Text01": "England",
+    "Email_Text02": "England",
+    "Email_Text03": "England"   
+  },
   "Hero": {
     "präTitle": "Design Internal",
     "Title": "8zense.com",
@@ -32,6 +37,12 @@
     "text_05": "In allen Phasen des Projektes wird in einem Analyze-Evaluate-Synthesyze-Circuit kontenuierlich fortentwickelt, bis Ihre Ziele und Vorgaben erreicht sind!",
     "text_06": "Ist Ihr Design-Projekt dann umgesetzt, erfolgt der Startpfiff zur Abnahme des Projektes durch Fernanda mit allen Beteiligten gemeinsam bis alle Korrekturen und Beanstandungen aus dem Weg geräumt sind"
   
+  },
+  "Layout": {
+    "metaData": {
+      "title": "8zense.com",
+      "description": "A landing page built with Next.js and next-intl"
+    }
   },
 
   "LocaleLayout": {

@@ -1,40 +1,16 @@
-// middleware.ts
-import {type NextRequest} from 'next/server';
-import {createServerClient, type CookieOptions} from '@supabase/ssr';
-import createIntlMiddleware from 'next-intl/middleware';
- 
-const handleI18nRouting = createIntlMiddleware({
-  locales: ['en', 'de','fr'],
-  defaultLocale: 'de'
+import createMiddleware from "next-intl/middleware";
+import { locales } from "@/src/i18n.config";
+
+export default createMiddleware({
+  defaultLocale: "en-us",
+  locales,
 });
- 
-export async function middleware(request: NextRequest) {
-  const response = handleI18nRouting(request);
- 
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        get(name: string) {
-          return request.cookies.get(name)?.value;
-        },
-        set(name: string, value: string, options: CookieOptions) {
-          request.cookies.set({name, value, ...options});
-          response.cookies.set({name, value, ...options});
-        },
-        remove(name: string, options: CookieOptions) {
-          request.cookies.set({name, value: '', ...options});
-          response.cookies.set({name, value: '', ...options});
-        }
-      }
-    }
-  );
- 
-  await supabase.auth.getUser();
-  return response;
-}
- 
+
 export const config = {
-  matcher: ['/', '/(de|en|fr)/:path*']
+  matcher: [
+    // Match all pathnames except for
+    // - … if they start with `/api`, `/_next` or `/_vercel`
+    // - … the ones containing a dot (e.g. `favicon.ico`)
+    "/((?!api|_next|_vercel|.*\\..*).*)",
+  ],
 };

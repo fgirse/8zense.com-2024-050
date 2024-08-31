@@ -8,6 +8,11 @@
     "login": "Anmeldung"
     
   },
+  "emailMessage": {
+    "Email_Text01": "Deutschland",
+    "Email_Text02": "Deutschland",
+    "Email_Text03": "Deutschland"   
+  },
   "Hero": {
     "präTitle": "Innenarchitektur",
     "Title": "8zense.com",
@@ -32,6 +37,13 @@
     "text03": "Timeless Design",
     "text04": "steht für zeitloses, exklusives und individuelles Design aus dem Werkstoff Beton. Jedes unserer individuell hergestellten Betonwerkstücke ist handgefertigt und ein Unikat "
   },
+  "Layout": {
+    "metaData": {
+      "title": "8zense.com",
+      "description": "landing page entwickelt mit Next.js und next-intl"
+    }
+  },
+
   "LocaleLayout": {
     "title": "next-intl Beispiel"
   },

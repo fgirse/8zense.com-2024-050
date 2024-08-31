@@ -1,6 +1,6 @@
 import Image from "next/image";
 import AuthButton from "@/src/components/AuthButton";
-import { createClient } from "@/utils/supabase/server";
+import { createClient } from "@/src/utils/supabase/server";
 import ConnectSupabaseSteps from "@/src/components/tutorial/ConnectSupabaseSteps";
 import SignUpUserSteps from "@/src/components/tutorial/SignUpUserSteps";
 import Header from "@/src/components/Header";
@@ -45,7 +45,9 @@ export default async function Index() {
 
         <section className="w-[100vw] mx-auto bg-slate-300">
           <div className="relative">
-            <Hero />
+            <Hero params={{
+              locale: ""
+            }} />
           </div>
 
           <section className="">

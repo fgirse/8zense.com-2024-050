@@ -1,17 +1,26 @@
-'use client';
+
 
 import Image from 'next/image';
 //import { useTranslations } from 'next-intl';
 import React from 'react';
-
 import Gsap from '@/src/components/Gsap';
 
 // import { useTranslations } from 'next-intl';
 import HeroImage from '@/public/assets/images/interiore14.jpg';
-import { useTranslations } from 'next-intl';
+import { Locale } from "@/src/i18n.config";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link"
+import { unstable_setRequestLocale } from "next-intl/server";
 
-const Hero = () => {
-const t = useTranslations('Hero');
+const locale: string =  "en-US";                                                                    
+export default function Hero({
+ 
+  params: { locale },
+}: Readonly<{ params: { locale: string } }>) {
+  unstable_setRequestLocale(locale);
+
+
+  const t = useTranslations('Hero')
 
   return (
     <section id="section-Hero" className="">
@@ -41,4 +50,3 @@ const t = useTranslations('Hero');
   );
 };
 
-export default Hero;

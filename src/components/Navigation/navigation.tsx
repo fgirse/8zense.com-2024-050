@@ -3,7 +3,7 @@
  * @see https://v0.dev/t/jIco0pmlXZZ
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import Link from "next/link"
+
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@/src/components/ui/navigation-menu"
 import { Sheet, SheetTrigger, SheetContent } from "@/src/components/ui/sheet"
 import { Button } from "@/src/components/ui/button"
@@ -11,15 +11,24 @@ import * as collapsible from "@/src/components/ui/collapsible"
 import { JSX, SVGProps } from "react"
 import Image from "next/image"
 import LogoEZ from"@/public/assets/images/LogoEZ990.svg";
-import Switcher from '@/src/components/LocaleSwitcher'
-import { useTranslations } from "next-intl"
-export default function Component() {
-const t = useTranslations('Navigation')
+import LocaleSwitcher from '@/src/components/localewitcher'
+
+import { Locale } from "@/src/i18n.config";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link"
+
+
+export default function Navigation() {
+  
+  const locale = useLocale() as Locale;
+
+  const t = useTranslations('Navigation')
 
   return (
     <header className="flex h-20 w-full bg-gradient to b 0223from bg-white to transparence.0 shrink-0 items-center px-4 md:px-6">
-      <Link href="#" className="mr-6 flex" prefetch={false}>  
-        <Image src={LogoEZ} alt="Logo" className="lg:h-20 lg:w-20" />
+     <Link href="/" className="mr-6 flex" prefetch={false}>  
+        <div className="w-20 h-20">
+        <Image src={LogoEZ} alt="Logo" width="60" height="60" /></div>
         <span className="sr-only">8zense.com</span>
       </Link>
       <NavigationMenu className="hidden xl:flex">
@@ -40,7 +49,7 @@ const t = useTranslations('Navigation')
                 <NavigationMenuLink asChild>
                   <Link
                     href="/about/whoweare"
-                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm lg:text-[1.33rem] font-black transition-colors  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm lg:text-2xl font-black transition-colors  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                     prefetch={false}
                   >
                     <div className="text-sm font-medium leading-none group-hover:underline">  {t('whoweare')}</div>
@@ -92,13 +101,13 @@ const t = useTranslations('Navigation')
       </NavigationMenu>
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="2xl:hidden">
-            <MenuIcon className="h-6 w-6" />
+          <Button variant="outline" size="icon" className="2xl:hidden mr-5">
+            <MenuIcon className="h-6 w-6 " />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
         <SheetContent className="bg-red-900" side="left">
-        <Link href="7" className="mr-6 hidden 2xl:flex" prefetch={false}>
+        <Link href="/" className="mr-6 hidden 2xl:flex" prefetch={false}>
         <Image src={LogoEZ} alt="Logo" className="h-16 w-16" />
         <span className="sr-only">8zense.com</span>
       </Link>
@@ -136,7 +145,7 @@ const t = useTranslations('Navigation')
           </div>
         </SheetContent>
       </Sheet>
-      <Switcher/> 
+      <LocaleSwitcher locale={"en-us"}/> 
     </header>
   )
 }
