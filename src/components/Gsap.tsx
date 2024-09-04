@@ -22,7 +22,7 @@ const Gsap = () => {
   }, []);
 
   return (
-    <div className=" size-60 sm:size-72 md:size-80 lg:h-[25vh] lg:w-[25vw]">
+    <div className="mt-4 size-60 sm:size-72 md:size-80 lg:h-[16vh] lg:w-[16vw]">
       <div>
         <Image id="Logo" alt="logo" src={Logo} width="333" />
       </div>

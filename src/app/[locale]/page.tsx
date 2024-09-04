@@ -46,7 +46,7 @@ export default async function Index() {
         <section className="w-[100vw] mx-auto bg-slate-300">
           <div className="relative">
             <Hero params={{
-              locale: ""
+              locale: "en"
             }} />
           </div>
 
@@ -55,17 +55,19 @@ export default async function Index() {
           </section>
           <section className="">
             <CollapseCardFeatures />
-          </section>
+           </section>
 
-          <section id="section-itworks" className="lg:h-[45vh]">
-            <FeatureAnim />
+          <section id="section-itworks" className="mt-96 lg:h-[45vh]">
+          
+          <FeatureAnim />
+
           </section>
 
           <section id="section-projRef" className="-mt-4 lg:h-[66vh]">
             <div className="bg-black">
               <h1 className="text-center text-white uppercase text-3xl md:text-6xl lg:mb-24  ">
-                Referenz Projekte
-              </h1>
+                  Referenz Projekte
+               </h1>
             </div>
 
             <ColorChangeCards />

@@ -1,3 +1,4 @@
+
 /**
  * v0 by Vercel.
  * @see https://v0.dev/t/jIco0pmlXZZ
@@ -12,10 +13,12 @@ import { JSX, SVGProps } from "react"
 import Image from "next/image"
 import LogoEZ from"@/public/assets/images/LogoEZ990.svg";
 import LocaleSwitcher from '@/src/components/localewitcher'
-
+//import revealLinks from '@/src/components/RevealLinks' 
 import { Locale } from "@/src/i18n.config";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link"
+
+
 
 
 export default function Navigation() {
@@ -25,13 +28,14 @@ export default function Navigation() {
   const t = useTranslations('Navigation')
 
   return (
-    <header className="flex h-20 w-full bg-gradient to b 0223from bg-white to transparence.0 shrink-0 items-center px-4 md:px-6">
+    <header className="flex w-full bg-gradient to b from bg-neutral-100 to transparence shrink-0 items-center px-2 md:px-3">
+     <div className="flex justify-between items-center bg-neutral-100 w-full">
      <Link href="/" className="mr-6 flex" prefetch={false}>  
         <div className="w-20 h-20">
         <Image src={LogoEZ} alt="Logo" width="60" height="60" /></div>
         <span className="sr-only">8zense.com</span>
       </Link>
-      <NavigationMenu className="hidden xl:flex">
+      <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList>
         <NavigationMenuLink asChild>
             <Link
@@ -45,11 +49,11 @@ export default function Navigation() {
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-neutral-200 hover:bg-neutral-300 uppercase lg:text-[1.33rem] font-black">{t('about')}</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="bg-yellow-700 grid w-[400px] p-2">
+              <div className="bg-slade-700 grid w-[400px] p-2 text-[2.3rem]">
                 <NavigationMenuLink asChild>
                   <Link
                     href="/about/whoweare"
-                    className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm lg:text-2xl font-black transition-colors  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    className=" group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-2xl lg:text-2xl font-black transition-colors  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                     prefetch={false}
                   >
                     <div className="text-sm font-medium leading-none group-hover:underline">  {t('whoweare')}</div>
@@ -62,7 +66,7 @@ export default function Navigation() {
                     className="group grid h-auto w-full items-center justify-start gap-1 rounded-md bg-background p-4 text-sm lg:text-[1.33rem] font-black transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                     prefetch={false}
                   >
-                    <div className="text-sm lg:text-[1.33rem] font-black leading-none group-hover:underline">  {t('whatwedo')}</div>
+                    <div className="text-3xl lg:text-[1.33rem] font-black leading-none group-hover:underline">  {t('whatwedo')}</div>
                     
                   </Link>
                 </NavigationMenuLink>
@@ -91,46 +95,51 @@ export default function Navigation() {
           <NavigationMenuLink asChild>
             <Link
               href="/impressum"
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 uppercase  text-sm lg:text-[1.33rem] font-black bg-neutral-200 hover:bg-neutral-300 transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+              className="hover:border-white hover:border-2                                                                                                                                                                                                       group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 uppercase  text-sm lg:text-[1.33rem] font-black bg-neutral-200 hover:bg-neutral-300 transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
               prefetch={false}
             >
                {t('impressum')}
             </Link>
           </NavigationMenuLink>
         </NavigationMenuList>
+        <div className="hidden lg:block lg:ml-12">
+        <LocaleSwitcher locale={"en-us"}/>
+        </div>
       </NavigationMenu>
+      </div>
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="2xl:hidden mr-5">
-            <MenuIcon className="h-6 w-6 " />
+            <MenuIcon className="h-8 w-8 text-slade-500" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
+      
         <SheetContent className="bg-red-900" side="left">
         <Link href="/" className="mr-6 hidden 2xl:flex" prefetch={false}>
         <Image src={LogoEZ} alt="Logo" className="h-16 w-16" />
-        <span className="sr-only">8zense.com</span>
+        <span className="text-blue-800">8zense.com</span>
       </Link>
           <div className="bg-red-900 px-3 text-slate-300 grid gap-2 py-6">
-            <Link href="/" className="flex w-full items-center py-2 text-2xl font-semibold hover:font-black hover:border-b-2 hover:border-spacing-12" prefetch={false}>
+            <Link href="/" className="flex w-full items-center py-2 text-[3.2322¨] font-semibold hover:font-black hover:border-b-2 hover:border-spacing-12" prefetch={false}>
               Home
             </Link>
             <collapsible.Collapsible className="grid gap-4">
-              <collapsible.CollapsibleTrigger className="flex w-full items-center text-2xl font-semibold [&[data-state=open]>svg]:rotate-90">
+              <collapsible.CollapsibleTrigger className="flex w-full items-center text-[3.23222rem] font-semibold [&[data-state=open]>svg]:rotate-90">
                 {t("about")} <ChevronRightIcon className="ml-auto h-5 w-5 transition-all" />
               </collapsible.CollapsibleTrigger>
               <collapsible.CollapsibleContent>
-                <div className="-mx-6 grid gap-6 bg-muted p-6">
+                <div className="-mx-6 grid gap-6 bg-slade-400   p-6">
                   <Link href="/about/whoweare" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
-                    <div className="text-sm font-medium leading-none group-hover:underline">   {t('whoweare')}</div>
+                    <div className="text-sm lg:text-[3.23222rem] font-medium leading-none group-hover:underline">   {t('whoweare')}</div>
                 
-                
+              
                   </Link>
-                  <Link href="/about/whatwedo" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
+                  <Link href="/about/whatwedo" className="group grid text-[3.23222rem] h-auto w-full justify-start gap-1" prefetch={false}>
                     <div className="text-sm font-medium leading-none group-hover:underline">   {t('whatwedo')}</div>
                     
                   </Link>
-                  <Link href="/about/ourhistory" className="group grid h-auto w-full justify-start gap-1" prefetch={false}>
+                  <Link href="/about/ourhistory" className="group grid text-[3.23222rem] h-auto w-full justify-start gap-1" prefetch={false}>
                   <div className="text-sm font-medium leading-none group-hover:underline">   {t('ourhistory')}</div>
                   </Link>
                 </div>
@@ -145,7 +154,9 @@ export default function Navigation() {
           </div>
         </SheetContent>
       </Sheet>
-      <LocaleSwitcher locale={"en-us"}/> 
+      <div className="mr-5 md: lg:hidden">
+      <LocaleSwitcher locale={"en-us"}/>
+      </div> 
     </header>
   )
 }

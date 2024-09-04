@@ -18,7 +18,7 @@
     "postTitle": "Timeless Desing with marterial conquer"
   },
   "introWebside": {
-    "zitat": "the beauty of a living thing",
+    "zitat": "The beauty of a living being is not created by the atoms it contains, but by the arrangement of these in relation to each other",
     "text01": "Desing Ineriore",
     "text02":  "Professionell Accompagnment, Advice and Support in planing and project-realizing your individual Interieure-Desings-Project in Appartement, Home, Office or medical Office. Contact us - you are welcome!!!!",
     "text03": "Timeless Design",
@@ -87,7 +87,12 @@
   "PathnamesPage": {
     "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>",
     "title": "Pathnames"
-  }
+  },
+  "Team": {
+    "scroll_down": " scroll down",
+    "scroll_up": "scroll up"
+      
+  } 
 }
 
 

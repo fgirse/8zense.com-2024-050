@@ -1,44 +1,19 @@
-
+import Navigation from "@/src/components/Navigation/navigation";
+import Footer from "@/src/components/Footer/footer";
+import ScrollToTop from "@/src/components/ScrollToTop"
 import "@/src/app/[locale]/globals.css";
 import { locales } from "@/src/i18n.config";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
-import useTextDirection from "@/src/_hooks/useTextDirection";
-
+import useTextDirection from '@/src/_hooks/useTextDirection';
 import clsx from 'clsx';
 import {Inter} from 'next/font/google';
 import {NextIntlClientProvider} from 'next-intl';
-
+import {
+  getMessages,
+  getTranslations,
+  unstable_setRequestLocale
+} from 'next-intl/server';
 import {ReactNode} from 'react';
-import Navigation from '@/src/components/Navigation/navigation';
-
-import '@/src/app/globales.css'
-import Footer from '@/src/components/Footer/footer';
-import { Metadata } from 'next';
-import { Roboto_Condensed, Architects_Daughter } from "next/font/google"
-
-import ScrollToTop from "@/src/components/ScrollToTop";
-
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
-
-  const roboto = Roboto_Condensed({
-    subsets: ["latin"],
-    weight: "400",
-    display: "swap",
-    variable: "--font-roboto-condensed"
-  });
-
-  const arch_daughter = Architects_Daughter({
-    subsets: ["latin"],
-    weight: "400",
-    display: "swap",
-    variable: "--font-architects-daughter"
-  });
+import {routing} from  '@/src/i18n/routing';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -47,51 +22,41 @@ type Props = {
   params: {locale: string};
 };
 
-
-
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale: any) => ({locale}));
 }
 
 export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
-  const t = await getTranslations({
-    locale,
-    namespace: "Layout.metaData",
-  });
+  params: {locale}
+}: Omit<Props, 'children'>) {
+  const t = await getTranslations({locale, namespace: 'LocaleLayout'});
 
   return {
-    title: t("title"),
-    description: t("description"),
+    title: t('title')
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
-  params: { locale },
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+  params: {locale}
+}: Props) {
+  // Enable static rendering
   unstable_setRequestLocale(locale);
-  const dir = useTextDirection();
-  const messages = getMessages();
-  return (
-    <html lang={locale}  className='h-full' suppressHydrationWarning dir={dir}>
-      <body className={clsx(roboto.className, 'flex h-full flex-col')}>
-        <NextIntlClientProvider>
-          <Navigation />
 
-          <div className="max-w-7xl mx-auto">{children}</div>
-          <ScrollToTop/>
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
+  return (
+    <html className="h-full" lang={locale}>
+      <body className={clsx(inter.className, 'flex h-full flex-col')}>
+        <NextIntlClientProvider messages={messages}>
+          <Navigation />
+          {children}
+          <ScrollToTop />
           <Footer/>
         </NextIntlClientProvider>
       </body>
     </html>
   );
 }
-
-

@@ -89,5 +89,12 @@
   "PathnamesPage": {
     "description": "<p>Auch die Pfadnamen sind internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/en/pathnames</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL entsprechend lokalisiert (<code>/de/pfadnamen</code>).</p>",
     "title": "Pfadnamen"
+  }, 
+  "Team": {
+    "scroll_down": "nach unten scrollen",
+    "scroll_up": "nach oben scrollen"
+     
+  }                      
   }
-}
+                                                                     
+    

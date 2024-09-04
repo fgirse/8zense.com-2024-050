@@ -34,7 +34,7 @@
     },
   
     "introWebside": {
-      "zitat": "die Schönheit eines Lebewesens wird nicht durch de Atome erzeugt welche es beinhaltet sondern von der Anordnung dieser zueinander ",
+      "zitat": "La beauté d'un être vivant n'est pas créée par les atomes qu'il contient, mais par la manière dont ils sont disposés les uns par rapport aux autres.",
       "text01": "Desing Interiore",
       "text02":  "begleitet, beratet und unterstützt Sie professionell bei der Planung und Umsetzung Ihres individuellen Interieure Desings in Wohnung, Haus, Büro ofer Praxis. Sprechen Sie uns an - Wir freuen uns auf Sie!",
       "text03": "Timeless Design",
@@ -44,7 +44,12 @@
       "metaData": {
         "title": "8zense.com",
         "description": "A landing page constructe with Next.js and next-intl"
-      }
+      },
+      "Team": {
+        "Title": "<p>Auch die Pfadnamen sind internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/en/pathnames</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL entsprechend lokalisiert (<code>/de/pfadnamen</code>).</p>",
+        "subtitle": "",
+        "statement":  ""  
+      } 
     },
 
 
@@ -95,6 +100,10 @@
     "PathnamesPage": {
       "description": "<p>Auch die Pfadnamen sind internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/en/pathnames</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL entsprechend lokalisiert (<code>/de/pfadnamen</code>).</p>",
       "title": "Pfadnamen"
-    }
+    },
+    "Team": {
+    "scroll_down": "tirez a bas",
+    "scroll_up": "tirez a top"
+  } 
   }
   

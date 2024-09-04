@@ -1,0 +1,10 @@
+{
+	"sourceLanguageTag": "en",
+	"languageTags": ["en", "de"], // add languageTags if needed
+	"modules": [
+		"https://cdn.jsdelivr.net/npm/@inlang/plugin-next-intl@1/dist/index.js"
+  	],
+	"plugin.inlang.nextIntl": {
+    		// settings
+  	}
+}

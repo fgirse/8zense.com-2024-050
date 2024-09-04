@@ -2,15 +2,25 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Player } from '@lottiefiles/react-lottie-player';
-import { useTranslations } from 'next-intl';
+import { Link, Locale } from "@/src/i18n.config";
+import { useLocale, useTranslations } from "next-intl";
+import getMessages from 'next-intl/server';
 
 interface Step {
   id: number;
   text: string;
   animation: string;
 }
- const HowItWorks: React.FC = () => {
-  const t = useTranslations('HowItWorks');
+
+const locale: string =  "en-US";                                                                    
+
+ export default function HowItWorks(){
+
+
+
+  const t= useTranslations ("HowItWorks");
+
+
   const [step, setStep] = useState<number>(0);
 
   const steps: Step[] = [
@@ -45,9 +55,7 @@ interface Step {
       text: t("text_06"),
       animation: "https://lottie.host/59703381-ed25-463c-913f-7cd163db2aa7/uF1vDxwgIZ.json",
     },
-    
   ];
-
 
 
   const handleStepChange = useCallback(() => {
@@ -61,39 +69,36 @@ interface Step {
 
   return (
     <>
-    <h1 className='text-center bg-black uppercase text-3xl text-white'>{t('Howitworks')}</h1>
-    <motion.div
-      className=" flex flex-col sm:min-h-screen h-full"
-      key={steps[step].id} // Add a unique key to trigger motion animation on step change
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0.5 }}
-      transition={{
-        duration: 1, // Adjust the duration as desired
-      }}
-    >
-      <div className='h-[100%] p-5 flex flex-col items-center justify-center'>
-        <div className=" grid-cols-2 gap-8">
-          <p className="mb-1§2 text-sm md:text-base text-slate-800 font-light leading-relaxed text-center">
-        
-          </p>                        
-          <h2 className="text-1xl md:text-4xl text-[#1A2238] font-semibold mb-4 text-center">
-            {`so funktioniert 8zense.com!!!`}
-          </h2>
-          <Player
-            autoplay
-            loop
-            src={steps[step].animation}
-            style={{ height: '26.66vh', width: '100%', marginBottom:"3vh"}}
-          />
+      <h1 className='text-center bg-black uppercase text-3xl text-white'>{t('Howitworks')}</h1>
+      <motion.div
+        className=" flex flex-col sm:min-h-screen h-full"
+        key={steps[step].id} // Add a unique key to trigger motion animation on step change
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0.5 }}
+        transition={{
+          duration: 1, // Adjust the duration as desired
+        }}
+      >
+        <div className='h-[10%] p-5 flex flex-col items-center justify-center'>
+          <div className=" grid-cols-2 gap-8">
+            <p className="mb-1§2 text-sm md:text-base text-slate-800 font-light leading-relaxed text-center">
+
+            </p>
+            <h2 className="text-1xl md:text-4xl text-[#1A2238] font-semibold mb-4 text-center">
+              {`so funktioniert 8zense.com!!!`}
+            </h2>
+            <Player
+              autoplay
+              loop
+              src={steps[step].animation}
+              style={{ height: '26.66vh', width: '100%', marginBottom: "3vh" }} />
+          </div>
+          <p className="h-24 w-96 relative')]  text-sm px-6 text-slate-900 font-light mb-4 text-center">
+            {steps[step].text}
+          </p>
         </div>
-        <p className= "h-24 w-96 relative')]  text-sm px-6 text-slate-900 font-light mb-4 text-center">
-          {steps[step].text}
-        </p>
-      </div>
-    </motion.div>
+      </motion.div>
     </>
   );
-};
-
-export default HowItWorks;
+}
